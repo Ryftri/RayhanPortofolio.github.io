@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="asset/Icons/icons-1.8.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="asset/Botstrap/css/bootstrap.min.css" />
+    <!-- Css ku -->
+    <link rel="stylesheet" href="asset/style.css" />
+
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand fs-3 fw-bold" href="#">Rayhan Zulfitri</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link tombol halrum" aria-current="page">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tombol halsaya">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tombol halsertif">Sertifikat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tombol halcontact">Contact-Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Akhir Navbar -->
+    </header>
+
+    
+    <main>
+        <!-- Jumbotron -->
+      <section class="jumbotron text-center">
+        <div class="container jumbotron1 text-light">
+          <h2 class="display-4 ms-auto fw-bold">Rayhan Zulfitri Dwi Cahyo</h1>
+          <p class="lead ms-auto fw-bolder">Fron-End Web Developer</p>
+        </div>
+      </section>
+      <!-- Akhir jumboyron -->
+
+      <!-- About -->
+      <article class="tentangsaya" id="About">
+        <div class="container1">
+            <div class="row baris-1 text-center text-black">
+                <div class="col">
+                    <h2>About</h2>
+                </div>
+            </div>
+            <div class="row baris-2 text-dark justify-content-center fs-5 text-center">
+                <div class="col-md-4 kolom-1 play">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique sapien ipsum. Maecenas in elementum neque. Phasellus commodo non elit eget ultricies.</p>
+                    </div>
+                <div class="col-md-4 kolom-2 play">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique sapien ipsum. Maecenas in elementum neque. Phasellus commodo non elit eget ultricies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+      </article>
+      <!-- Akhir about -->
+
+      <!-- Sertif -->
+      <section class="sertifsaya" id="Sertifikat">
+        <div class="container2">
+          <div class="row barisCard-1">
+            <div class="col text-center">
+              <h2>Sertifikate</h2>
+            </div>
+          </div>
+          <div class="row barisCard-2 justify-content-center">
+            <div class="col-md-5 mb-3 kartu-1 play">
+              <div class="card shadow">
+                <img src="asset/sertif 1.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text">Sertifikat Belajar Dasar Pemrograman Web.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 mb-3 kartu-2 play">
+              <div class="card shadow">
+                <img src="asset/sertif 2.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text">Sertifikat Belajar Membuat Front-End Web Untuk Pemula.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir sertif -->
+      <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="1" d="M0,64L48,90.7C96,117,192,171,288,186.7C384,203,480,181,576,154.7C672,128,768,96,864,96C960,96,1056,128,1152,138.7C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+      <!-- Contact -->
+      <section class="contact" id="contact">
+        <div class="container3">
+          <div class="row">
+            <div class="col text-center">
+              <h2 class="text-light">Contact-Me</h2>
+            </div>
+          </div>
+          <div class="row barisEmail">
+            <div class="col">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label text-light">Nama Lengkap</label>
+                  <input type="text" class="form-control" id="Nama" aria-describedby="name">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label text-light">Email</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label text-light">Pertanyaan</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Kirim <i class="bi bi-send"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Akhir contatc -->
+    </main>
+
+    <svg class="waves" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,256L48,224C96,192,192,128,288,117.3C384,107,480,149,576,165.3C672,181,768,171,864,154.7C960,139,1056,117,1152,117.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <!-- Footer -->
+    <footer class="footer fw-bold text-center fs-4">
+      <p>Dibuat dengan penuh <i class="bi bi-heart-fill"></i> oleh <a class="text-dark" href="https://www.instagram.com/r.e_ray/" target="_blank"><i class="bi bi-instagram"></i>Rayhan Zulfitri Dwi Cahyo</a></p>
+    </footer>
+    <!-- Akhir Footer -->
+  </body>
+  <script src="asset/Botstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/JQuery/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="asset/js.js"></script>
+</html>

@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #Sertifikat {
+    width: 100vw;
+  }
+}
+@media (min-width: 768px) {
+  #Sertifikat {
+    height: 100vh;
+  }
+}
+
+.jumbotron {
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  animation: Transisimasukjumbo 15s alternate;
+}
+
+@keyframes Transisimasukjumbo {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+    animation-play-state: paused;
+  }
+}
+
+.jumbotron1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  animation: Transisimasuk 15s alternate;
+}
+
+.navbar {
+  background: transparent !important;
+  transition: 0.5s;
+  animation: Transisimasuk 15s alternate;
+}
+
+.navbar.scrolled {
+  background: #273036 !important;
+}
+
+@keyframes Transisimasuk {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  17% {
+    opacity: 1;
+    transform: translateY(0);
+    animation-play-state: paused;
+  }
+}
+
+#About {
+  height: 100vh;
+  background-color: #f3f4f5;
+  padding: 8rem 3rem 3rem 3rem;
+}
+
+.container1 {
+  height: 80%;
+}
+
+.baris-2 {
+  height: 100%;
+  padding: 2rem 1rem 2rem 2rem;
+}
+
+#Sertifikat {
+  background-color: #f3f4f5;
+  padding: 6rem 3rem 3rem 3rem;
+}
+
+.barisCard-2 {
+  padding-top: 2rem;
+  transition: 0.5s;
+}
+
+.play {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1.2s ease;
+  z-index: 0;
+}
+
+.play.aktif {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.tombol {
+  cursor: pointer;
+}
+
+.wave {
+  background: rgb(243, 244, 245);
+  background: linear-gradient(180deg, rgba(243, 244, 245, 1) 90%, rgba(39, 48, 54, 1) 100%);
+}
+
+#contact {
+  background-color: #273036;
+  height: 100vh;
+  padding: 8rem 3rem 3rem 3rem;
+}
+
+.barisEmail {
+  padding: 2rem 5rem 5rem 5rem;
+}
+
+.footer {
+  background-color: #f3f4f5;
+  height: 20vh;
+}
+
+.waves {
+  margin: 0;
+  background: rgb(39, 48, 54);
+  background: linear-gradient(180deg, rgba(39, 48, 54, 1) 90%, rgba(243, 244, 245, 1) 100%);
+}
+
+.kartu-1 {
+  transition: transform 0.2s;
+  margin: 0 auto;
+}
+
+.kartu-1:hover {
+  transform: scale(1.1);
+}
+
+.kartu-2 {
+  transition: transform 0.2s;
+  margin: 0 auto;
+}
+
+.kartu-2:hover {
+  transform: scale(1.1);
+}
