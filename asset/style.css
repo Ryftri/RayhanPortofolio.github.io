@@ -7,9 +7,17 @@
   #Sertifikat {
     width: 100vw;
   }
+
+  #contact {
+    width: 100vw;
+  }
 }
 @media (min-width: 768px) {
   #Sertifikat {
+    height: 100vh;
+  }
+
+  #contact {
     height: 100vh;
   }
 }
@@ -111,8 +119,7 @@
 
 #contact {
   background-color: #273036;
-  height: 100vh;
-  padding: 6rem 0.5rem 1rem 0.5rem;
+  padding: 6rem 1rem 1rem 1rem;
 }
 
 .barisEmail {
