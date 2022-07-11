@@ -116,20 +116,28 @@
           </div>
           <div class="row barisEmail">
             <div class="col">
-              <form>
+              <div class="alert alert-primary alert-dismissible fade show d-none peringatan" role="alert">
+                <strong>Terimakasih!</strong> Pesan anda sudah kami terima. Mohon bersabar ya, dan tunggu respon dari kami.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <form name="kontak-form">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label text-light">Nama Lengkap</label>
-                  <input type="text" class="form-control" id="Nama" aria-describedby="name">
+                  <input type="text" class="form-control" id="Nama" aria-describedby="name" name="nama">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label text-light">Email</label>
-                  <input type="email" class="form-control" id="email">
+                  <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="mb-3">
                   <label for="exampleFormControlTextarea1" class="form-label text-light">Pertanyaan</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pesan"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Kirim <i class="bi bi-send"></i></button>
+                <button type="submit" class="btn btn-primary tombol-kirim">Kirim <i class="bi bi-send"></i></button>
+                <button class="btn btn-primary tombol-loading d-none" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Loading...
+                </button>
               </form>
             </div>
           </div>
@@ -144,8 +152,39 @@
       <p>Dibuat dengan penuh <i class="bi bi-heart-fill"></i> oleh <a class="text-dark" href="https://www.instagram.com/r.e_ray/" target="_blank"><i class="bi bi-instagram"></i>Rayhan Zulfitri Dwi Cahyo</a></p>
     </footer>
     <!-- Akhir Footer -->
+
+    <script src="asset/Botstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwi-RrLd0M4YTwZ-JT65GRKGVaNaKRLQRbcmHBkPfLiEV8akgnJs7cMq5l5Ge0mn5aR/exec';
+      const form = document.forms['kontak-form'];
+      const tmblKirim = document.querySelector('.tombol-kirim');
+      const tmblLoading = document.querySelector('.tombol-loading');
+      const myAlert = document.querySelector('.peringatan');
+
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        // saat tombolsubmit dikirim
+        // tampilkan tmbl load, hilangkan tombol kirim
+        tmblLoading.classList.toggle('d-none');
+        tmblKirim.classList.toggle('d-none');
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            // tampilkan tmbl kirim, hilangkan tombol loading
+            tmblLoading.classList.toggle('d-none');
+            tmblKirim.classList.toggle('d-none');
+            // nampilin Alert
+            myAlert.classList.toggle('d-none');
+            // resert form
+            form.reset();
+            console.log('Success!', response)
+          })
+          .catch(error => console.error('Error!', error.message));
+      });
+    </script>
   </body>
-  <script src="asset/Botstrap/js/bootstrap.bundle.min.js"></script>
   <script src="asset/JQuery/jquery-3.6.0.min.js" type="text/javascript"></script>
   <script src="asset/js.js"></script>
 </html>
