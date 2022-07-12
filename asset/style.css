@@ -154,3 +154,12 @@
 .kartu-2:hover {
   transform: scale(1.1);
 }
+
+.kartu-3 {
+  transition: transform 1.2s;
+  margin: 0 auto;
+}
+
+.kartu-3:hover {
+  transform: scale(1.1);
+}
