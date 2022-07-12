@@ -11,6 +11,10 @@
   #contact {
     width: 100vw;
   }
+
+  #projeksaya {
+    width: 100vw;
+  }
 }
 @media (min-width: 768px) {
   #Sertifikat {
@@ -18,6 +22,10 @@
   }
 
   #contact {
+    height: 100vh;
+  }
+
+  #projeksaya {
     height: 100vh;
   }
 }
@@ -143,6 +151,5 @@
 
 #projeksaya {
   padding: 6rem 3rem 1rem 3rem;
-  height: 100vh;
   background-color: #f3f4f5;
 }
