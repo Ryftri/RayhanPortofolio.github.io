@@ -1,27 +1,29 @@
 $(window).scroll(function () {
   $("nav").toggleClass("scrolled", $(this).scrollTop() > 550);
+  $("a.tulisan-ubah").toggleClass("scroll", $(this).scrollTop() > 550);
 });
 
-window.addEventListener("scroll", animkeluar);
+// window.addEventListener("scroll", animkeluar);
 
-function animkeluar() {
-  let animmulai = document.querySelectorAll(".play");
+// function animkeluar() {
+//   let animmulai = document.querySelectorAll(".play");
 
-  for (let i = 0; i < animmulai.length; i++) {
-    let tinggilayar = window.innerHeight;
-    let bagAtas = animmulai[i].getBoundingClientRect().top;
-    let poin = 150;
+//   for (let i = 0; i < animmulai.length; i++) {
+//     let tinggilayar = window.innerHeight;
+//     let bagAtas = animmulai[i].getBoundingClientRect().top;
+//     let poin = 150;
 
-    if (bagAtas < tinggilayar - poin) {
-      animmulai[i].classList.add("aktif");
-    }
-  }
-}
+//     if (bagAtas < tinggilayar - poin) {
+//       animmulai[i].classList.add("aktif");
+//     }
+//   }
+// }
 
 function tekanUntukScroll() {
   const halaman2 = document.querySelector(".tentangsaya");
   const halaman3 = document.querySelector(".sertifsaya");
   const halaman4 = document.querySelector(".contact");
+  const halaman5 = document.querySelector(".projeksaya");
   const tombol = document.querySelectorAll(".tombol");
 
   for (let alltombol of tombol) {
@@ -48,6 +50,11 @@ function tekanUntukScroll() {
 
       if (target.classList.contains("halcontact")) {
         halaman4.scrollIntoView();
+        return;
+      }
+
+      if (target.classList.contains("halproject")) {
+        halaman5.scrollIntoView();
         return;
       }
     });
