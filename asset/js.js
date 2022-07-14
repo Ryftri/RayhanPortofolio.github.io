@@ -1,6 +1,7 @@
 $(window).scroll(function () {
   $("nav").toggleClass("scrolled", $(this).scrollTop() > 550);
   $("a.tulisan-ubah").toggleClass("scroll", $(this).scrollTop() > 550);
+  $("a.ubah-warna").toggleClass("scrollbawah", $(this).scrollTop() > 550);
 });
 
 // window.addEventListener("scroll", animkeluar);

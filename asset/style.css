@@ -61,6 +61,10 @@
   transition: 0.5s;
 }
 
+.navbar-dark {
+  animation: Transisimasuk 15s alternate;
+}
+
 .navbar.scrolled {
   background: #273036 !important;
 }
@@ -72,6 +76,20 @@
 
 .tulisan-ubah.scroll {
   opacity: 1 !important;
+}
+
+.ubah-warna {
+  color: #000000;
+  transition: 0.5s;
+}
+
+.ubah-warna.scrollbawah {
+  color: #dbdbdb;
+}
+
+.scrollbawah:hover {
+  color: #ffffff;
+  transition: 0.5;
 }
 
 @keyframes Transisimasuk {
